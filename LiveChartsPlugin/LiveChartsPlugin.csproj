@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{89A190DE-F3F9-428F-BDC9-1E32A12ABC7E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LiveChartsPlugin</RootNamespace>
+    <AssemblyName>LiveChartsPlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <LangVersion>12.0</LangVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <PackageReference Include="LiveChartsCore.SkiaSharpView.WPF">
+      <Version>2.0.0-rc2</Version>
+    </PackageReference>
+    <PackageReference Include="MilestoneSystems.VideoOS.Platform" Version="*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\LiveChartsPluginAddUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\LiveChartsPluginAddUserControl.Designer.cs">
+      <DependentUpon>LiveChartsPluginAddUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LiveChartsPluginHelpPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\LiveChartsPluginHelpPage.Designer.cs">
+      <DependentUpon>LiveChartsPluginHelpPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LiveChartsPluginItemManager.cs" />
+    <Compile Include="Admin\LiveChartsPluginTabPlugin.cs" />
+    <Compile Include="Admin\LiveChartsPluginTabUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\LiveChartsPluginTabUserControl.Designer.cs">
+      <DependentUpon>LiveChartsPluginTabUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LiveChartsPluginToolsOptionDialogPlugin.cs" />
+    <Compile Include="Admin\LiveChartsPluginToolsOptionDialogUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\LiveChartsPluginToolsOptionDialogUserControl.designer.cs">
+      <DependentUpon>LiveChartsPluginToolsOptionDialogUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LiveChartsPluginUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\LiveChartsPluginUserControl.Designer.cs">
+      <DependentUpon>LiveChartsPluginUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Background\LiveChartsPluginBackgroundPlugin.cs" />
+    <Compile Include="ChartsConfigs\ChartViewModel.cs" />
+    <Compile Include="Client\LiveChartsPluginPropertiesWpfUserControl.xaml.cs">
+      <DependentUpon>LiveChartsPluginPropertiesWpfUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Client\LiveChartsPluginSettingsPanelPlugin.cs" />
+    <Compile Include="Client\LiveChartsPluginSettingsPanelControl.xaml.cs">
+      <DependentUpon>LiveChartsPluginSettingsPanelControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Client\LiveChartsPluginSidePanelPlugin.cs" />
+    <Compile Include="Client\LiveChartsPluginSidePanelWpfUserControl.xaml.cs">
+      <DependentUpon>LiveChartsPluginSidePanelWpfUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Client\LiveChartsPluginViewItemPlugin.cs" />
+    <Compile Include="Client\LiveChartsPluginViewItemManager.cs" />
+    <Compile Include="Client\LiveChartsPluginViewItemToolbarPlugin.cs" />
+    <Compile Include="Client\LiveChartsPluginViewItemWpfUserControl.xaml.cs">
+      <DependentUpon>LiveChartsPluginViewItemWpfUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Client\LiveChartsPluginViewLayout.cs" />
+    <Compile Include="Client\LiveChartsPluginWorkSpacePlugin.cs" />
+    <Compile Include="Client\LiveChartsPluginWorkSpaceToolbarPlugin.cs" />
+    <Compile Include="Client\LiveChartsPluginWorkSpaceViewItemManager.cs" />
+    <Compile Include="Client\LiveChartsPluginWorkSpaceViewItemPlugin.cs" />
+    <Compile Include="Client\LiveChartsPluginWorkSpaceViewItemWpfUserControl.xaml.cs">
+      <DependentUpon>LiveChartsPluginWorkSpaceViewItemWpfUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LiveChartsPluginDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\LiveChartsPluginAddUserControl.resx">
+      <DependentUpon>LiveChartsPluginAddUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\LiveChartsPluginTabUserControl.resx">
+      <DependentUpon>LiveChartsPluginTabUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\LiveChartsPluginToolsOptionDialogUserControl.resx">
+      <DependentUpon>LiveChartsPluginToolsOptionDialogUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\LiveChartsPluginHelpPage.resx">
+      <DependentUpon>LiveChartsPluginHelpPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\LiveChartsPluginUserControl.resx">
+      <DependentUpon>LiveChartsPluginUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="plugin.def">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Resources\DummyItem.bmp" />
+    <EmbeddedResource Include="Resources\WorkSpaceIcon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Client\LiveChartsPluginPropertiesWpfUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Client\LiveChartsPluginSettingsPanelControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Client\LiveChartsPluginSidePanelWpfUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Client\LiveChartsPluginViewItemWpfUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Client\LiveChartsPluginWorkSpaceViewItemWpfUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y "$(TargetPath)" "C:\Program Files\Milestone\MIPPlugins\LiveChartsPlugin"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
