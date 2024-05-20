@@ -114,9 +114,9 @@ namespace LiveChartsPlugin
                 _settingsPanelPlugins.Add(new LiveChartsPluginSettingsPanelPlugin());
             }
 
-            _tabPlugins.Add(new LiveChartsPluginTabPlugin());
-            _toolsOptionsDialogPlugins.Add(new LiveChartsPluginToolsOptionDialogPlugin());
-            _backgroundPlugins.Add(new LiveChartsPluginBackgroundPlugin());
+            //_tabPlugins.Add(new LiveChartsPluginTabPlugin());
+            //_toolsOptionsDialogPlugins.Add(new LiveChartsPluginToolsOptionDialogPlugin());
+            //_backgroundPlugins.Add(new LiveChartsPluginBackgroundPlugin());
         }
 
         /// <summary>

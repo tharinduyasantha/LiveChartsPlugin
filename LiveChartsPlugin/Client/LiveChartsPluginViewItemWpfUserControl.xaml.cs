@@ -27,7 +27,6 @@ namespace LiveChartsPlugin.Client
 
         public LiveChartsPluginViewItemManager _viewItemManager { get; }
         private object _themeChangedReceiver;
-        public ChartViewModel ViewModel { get; }
 
         #endregion
 
@@ -41,17 +40,7 @@ namespace LiveChartsPlugin.Client
             _viewItemManager = viewItemManager;
 
             InitializeComponent();
-            //TODO : Need to refactor the code
-            //var dv = new ChartViewModel
-            //{
-            //    DonutSeries = viewItemManager.DonutSeries,
-            //    HeatSeries = viewItemManager.HeatSeries,
-            //    Series = viewItemManager.Series,
-            //    StackedSeries = viewItemManager.StackedSeries,
-            //    XAxes = viewItemManager.XAxes,
-            //    HeatXAxes = viewItemManager.HeatXAxes,
-            //    HeatYAxes = viewItemManager.HeatYAxes
-            //};
+            
             DataContext = viewItemManager;
         }
 
